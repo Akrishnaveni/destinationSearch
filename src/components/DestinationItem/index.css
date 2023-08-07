@@ -1,0 +1,10 @@
+.destination-card-container {
+  diplay: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+.image {
+  width: 40px;
+  height: 40px;
+}
