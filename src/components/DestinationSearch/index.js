@@ -3,10 +3,8 @@ import DestinationItem from '../DestinationItem'
 import './index.css'
 
 class DestinationSeach extends Component {
-  const destinationsList = props
-  stae = {
+  state = {
     searchInput: '',
-    destinationList: destinationsList,
   }
 
   onChangeSearchInput = event => {
@@ -16,13 +14,13 @@ class DestinationSeach extends Component {
   }
 
   render() {
-    const {searchInput, destinationList} = this.state
-   
-    const searchResult = destinationsList.filter(each=>{
-       const nameInLower = each.name.toLowerCase()
-        return(
-   nameInLower.includes(searchInput.toLowerCase()))}),
-    
+    const {searchInput} = this.state
+    const {destinationsList} = this.props
+
+    const searchResult = destinationsList.filter(each =>
+      each.name.toLowerCase().includes(searchInput.toLowerCase()),
+    )
+
     return (
       <div className="bg-container">
         <h1 className="title">Destination Search</h1>
@@ -47,3 +45,5 @@ class DestinationSeach extends Component {
     )
   }
 }
+
+export default DestinationSeach
