@@ -2,12 +2,14 @@ import './index.css'
 
 const DestinationItem = props => {
   const {destinationDetails} = props
-  const {name, imgUrl} = destinationDetails
+  const {imgUrl, name} = destinationDetails
+
   return (
-    <li className="destination-card-container">
-      <img src={imgUrl} alt={name} className="image" />
-      <p className="description">{name}</p>
+    <li className="destination-item">
+      <img src={imgUrl} alt={name} className="destination-image" />
+      <p className="name">{name}</p>
     </li>
   )
 }
+
 export default DestinationItem
